@@ -70,7 +70,7 @@ public class BookEntityRepositoryTest {
         assertNotNull(book2.getId());
 
         // Now, retrieve the books from the database
-        List<BookEntity> foundBooks = bookRepository.findByAuthor("Julius Caesar");
+        List<BookEntity> foundBooks = bookRepository.findByAuthorContainingIgnoreCase("Julius Caesar");
 
         // Assert that the correct number of books were found
         assertEquals(2, foundBooks.size());
