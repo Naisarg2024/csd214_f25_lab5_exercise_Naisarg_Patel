@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Magazines</title>
+</head>
+<body>
+<h1>Magazine List</h1>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Publisher</th>
+        <th>Issue Number</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="m : ${magazines}">
+        <td th:text="${m.id}"></td>
+        <td th:text="${m.name}"></td>
+        <td th:text="${m.price}"></td>
+        <td th:text="${m.publisher}"></td>
+        <td th:text="${m.issueNumber}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
